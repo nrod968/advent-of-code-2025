@@ -51,29 +51,6 @@ def convert_battery_banks_to_ints(battery_banks: list[str]) -> list[list[int]]:
         battery_banks_ints.append(battery_bank_int[left_battery_index:])
     return battery_banks_ints
 
-# def get_max_joltage_overjolted(battery_bank: str) -> int:
-#     battery_pack = list(battery_bank[:BATTERY_PACK_SIZE])
-#     for battery in battery_bank[BATTERY_PACK_SIZE:(-1 * BATTERY_PACK_SIZE + 1)]:
-#         clear_pack = False
-#         for i in range(len(battery_pack)):
-#             if clear_pack:
-#                 battery_pack[i] = '0'
-#             elif battery > battery_pack[i]:
-#                 clear_pack = True
-#                 battery_pack[i] = battery
-    
-#     for i in range(-1 * BATTERY_PACK_SIZE + 1, 0):
-#         battery = battery_bank[i]
-#         clear_pack = False
-#         for j in range(i, 0):
-#             if clear_pack:
-#                 battery_pack[i] = '0'
-#             elif battery > battery_pack[i]:
-#                 clear_pack = True
-#                 battery_pack[i] = battery
-
-#     return int("".join(battery_pack))
-
 def get_max_joltage_overjolted(battery_bank: str) -> int:
     battery_pack = []
     prev_index = -1
