@@ -74,6 +74,6 @@ def max_output_joltage_overjolted(file_name: str) -> int:
         max_output_joltage += get_max_joltage_overjolted(battery_bank)
         print(get_max_joltage_overjolted(battery_bank))
     return max_output_joltage
-
+7
 print(max_output_joltage("input.txt"))
 print(max_output_joltage_overjolted("input.txt"))
